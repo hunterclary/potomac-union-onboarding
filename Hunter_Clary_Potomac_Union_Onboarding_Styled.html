@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Union Onboarding Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #fec00f;
+    --charcoal: #212121;
+    --charcoal-dark: #181818;
+    --ink: #212121;
+    --paper: #ffffff;
+    --line: #e6e6e6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  h1, h2, h3, .wordmark {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    line-height: 1.05;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 34px; height: 34px; }
+  .wordmark {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+  nav .navlinks {
+    display: flex;
+    gap: 32px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: var(--charcoal);
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--gold);
+    padding: 90px 48px 110px;
+  }
+  .hero-inner { max-width: 760px; }
+  .eyebrow {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    opacity: 0.75;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    margin-bottom: 22px;
+  }
+  .hero p {
+    font-size: 18px;
+    max-width: 560px;
+    color: var(--charcoal);
+  }
+
+  /* SECTION SHELL */
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 48px; }
+  section.block { padding: 70px 0; }
+  section.block.tight { padding: 50px 0; }
+  .section-label {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9a9a9a;
+    margin-bottom: 14px;
+  }
+
+  /* STEP ROADMAP */
+  .steps { display: flex; flex-direction: column; }
+  .step {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 28px;
+    padding: 34px 0;
+    border-top: 1px solid var(--line);
+  }
+  .step:last-child { border-bottom: 1px solid var(--line); }
+  .step-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--charcoal-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-badge span {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--gold);
+  }
+  .step h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .step p { font-size: 16px; color: #3a3a3a; max-width: 640px; }
+
+  /* DARK CTA BAND */
+  .cta {
+    background: var(--charcoal-dark);
+    color: #fff;
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .cta h2 {
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
+  .cta p {
+    color: #d8d8d8;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    max-width: 520px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--charcoal);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  footer {
+    padding: 34px 48px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  footer .wordmark { font-size: 15px; letter-spacing: 3px; color: #9a9a9a; }
+  footer svg { width: 22px; height: 22px; }
+
+  @media (max-width: 640px) {
+    nav, .hero, .wrap, .cta, footer { padding-left: 24px; padding-right: 24px; }
+    .hero h1 { font-size: 36px; }
+    .step { grid-template-columns: 56px 1fr; gap: 18px; }
+    .step-badge { width: 48px; height: 48px; }
+    .step-badge span { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 6 L88 27 V73 L50 94 L12 73 V27 Z" stroke="#fec00f" stroke-width="6"/>
+      <path d="M50 26 L70 38 V62 L50 74 L30 62 V38 Z" stroke="#fec00f" stroke-width="6"/>
+    </svg>
+    <span class="wordmark">POTOMAC</span>
+  </div>
+  <div class="navlinks">
+    <span>UNION</span>
+    <span>SDBA</span>
+    <span>ADVISORS</span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Advisor Onboarding</div>
+    <h1>Your Union Onboarding Experience</h1>
+    <p>Joining Union means putting your practice, and your clients&rsquo; assets, onto a new platform. That is a big decision, and we do not expect you to figure it out on your own. Here is exactly what happens, in order, from your first conversation with our team to opening your first account.</p>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="section-label">The Roadmap</div>
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-badge"><span>1</span></div>
+        <div>
+          <h3>Initial Advisor Onboarding</h3>
+          <p>Once you have decided to bring your business to Union, we start with a kickoff conversation. This is where we map out your practice, your client base, and what you need from the platform, so every step after this one is built around your specific situation instead of a generic checklist.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge"><span>2</span></div>
+        <div>
+          <h3>Executed Co-Advisor Agreement</h3>
+          <p>Next comes the paperwork that makes the partnership official: a Co-Advisor Agreement between Potomac and your broker-dealer or RIA (the firm you are affiliated with as an advisor). Once this is signed, your firm is formally recognized as a co-advisor on the Union platform, and we can begin setting up your access.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge"><span>3</span></div>
+        <div>
+          <h3>Union TAMP Onboarding Call</h3>
+          <p>With the agreement in place, we schedule a dedicated onboarding call focused entirely on Union, our turnkey asset management platform. This is a guided walkthrough of how the platform works day to day: model selection, billing, reporting, and the tools you will use most. Bring your questions. This call is built for them.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge"><span>4</span></div>
+        <div>
+          <h3>Union Platform Login</h3>
+          <p>You will receive your credentials to log into Union itself, the system where you will manage models, monitor accounts, and pull reporting for your clients. Your login is your entry point to everything the platform does for you.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge"><span>5</span></div>
+        <div>
+          <h3>DocuSign Login</h3>
+          <p>Client paperwork and account applications move through DocuSign, our e-signature system. Your DocuSign login lets you send and manage that paperwork directly, keeping the client experience smooth from the very first form.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge"><span>6</span></div>
+        <div>
+          <h3>Custodial Master Code</h3>
+          <p>You will also receive your custodial master code, the identifier that connects new client accounts to your advisor relationship at the custodian, the institution that actually holds and safeguards your clients&rsquo; assets. This code is what ties every account you open back to you.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge"><span>7</span></div>
+        <div>
+          <h3>Account Opening Walkthrough</h3>
+          <p>Finally, we walk through opening your first account together. This is not a manual you read on your own. A member of our team sits with you through the real process, so by the time you open your next account solo, you have already done it once with support.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>That's the full path</h2>
+  <p>From signed agreement to fully operational advisor on Union, every step is designed to get you moving as quickly as possible without cutting corners on the details that protect you and your clients.</p>
+  <a class="btn" href="https://potomac.com/contact" target="_blank" rel="noopener">Questions? Reach Your Team</a>
+</section>
+
+<footer>
+  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 6 L88 27 V73 L50 94 L12 73 V27 Z" stroke="#fec00f" stroke-width="6"/>
+    <path d="M50 26 L70 38 V62 L50 74 L30 62 V38 Z" stroke="#fec00f" stroke-width="6"/>
+  </svg>
+  <span class="wordmark">POTOMAC</span>
+</footer>
+
+</body>
+</html>
