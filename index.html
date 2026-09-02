@@ -40,7 +40,15 @@
     padding: 22px 48px;
     border-bottom: 1px solid var(--line);
   }
-  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.15s ease;
+  }
+  .brand:hover { opacity: 0.72; }
   .brand svg { width: 34px; height: 34px; }
   .wordmark {
     font-size: 20px;
@@ -54,6 +62,18 @@
     font-size: 14px;
     letter-spacing: 0.5px;
     color: var(--charcoal);
+  }
+  nav .navlinks a {
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  nav .navlinks a:hover { border-bottom-color: var(--charcoal); }
+  a:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--charcoal);
+    outline-offset: 3px;
   }
 
   /* HERO */
@@ -171,6 +191,7 @@
   }
   footer .wordmark { font-size: 15px; letter-spacing: 3px; color: #9a9a9a; }
   footer svg { width: 22px; height: 22px; }
+  footer .brand:hover .wordmark { color: var(--charcoal); }
 
   @media (max-width: 640px) {
     nav, .hero, .wrap, .cta, footer { padding-left: 24px; padding-right: 24px; }
@@ -184,17 +205,17 @@
 <body>
 
 <nav>
-  <div class="brand">
+  <a class="brand" href="https://potomac.com" target="_blank" rel="noopener">
     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M50 6 L88 27 V73 L50 94 L12 73 V27 Z" stroke="#fec00f" stroke-width="6"/>
       <path d="M50 26 L70 38 V62 L50 74 L30 62 V38 Z" stroke="#fec00f" stroke-width="6"/>
     </svg>
     <span class="wordmark">POTOMAC</span>
-  </div>
+  </a>
   <div class="navlinks">
-    <span>UNION</span>
-    <span>SDBA</span>
-    <span>ADVISORS</span>
+    <a href="https://potomac.com/tamp" target="_blank" rel="noopener">UNION</a>
+    <a href="https://potomac.com/sdba" target="_blank" rel="noopener">SDBA</a>
+    <a href="https://potomac.com" target="_blank" rel="noopener">ADVISORS</a>
   </div>
 </nav>
 
@@ -278,11 +299,13 @@
 </section>
 
 <footer>
-  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 6 L88 27 V73 L50 94 L12 73 V27 Z" stroke="#fec00f" stroke-width="6"/>
-    <path d="M50 26 L70 38 V62 L50 74 L30 62 V38 Z" stroke="#fec00f" stroke-width="6"/>
-  </svg>
-  <span class="wordmark">POTOMAC</span>
+  <a class="brand" href="https://potomac.com" target="_blank" rel="noopener">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 6 L88 27 V73 L50 94 L12 73 V27 Z" stroke="#fec00f" stroke-width="6"/>
+      <path d="M50 26 L70 38 V62 L50 74 L30 62 V38 Z" stroke="#fec00f" stroke-width="6"/>
+    </svg>
+    <span class="wordmark">POTOMAC</span>
+  </a>
 </footer>
 
 </body>
